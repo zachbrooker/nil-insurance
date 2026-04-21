@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Request a Quote — NIL & Incentive Insurance | World</title>
+<meta name="description" content="Request a quote for NIL insurance, contractual bonus insurance, or prize contest coverage. Response within one business day. Direct contact with our specialty team.">
+<meta name="keywords" content="NIL insurance quote, athletic insurance quote, contact Peter Baer, World Insurance NIL contact">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="World Insurance Associates, LLC">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://zachbrooker.github.io/NIL-Insurance/contact.html">
+
+<!-- Open Graph (Facebook, LinkedIn) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://zachbrooker.github.io/NIL-Insurance/contact.html">
+<meta property="og:title" content="Request a Quote — NIL & Incentive Insurance | World">
+<meta property="og:description" content="Request a quote for NIL insurance, contractual bonus insurance, or prize contest coverage. Response within one business day. Direct contact with our specialty team.">
+<meta property="og:image" content="https://zachbrooker.github.io/NIL-Insurance/world-logo.png">
+<meta property="og:site_name" content="World NIL Insurance">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://zachbrooker.github.io/NIL-Insurance/contact.html">
+<meta name="twitter:title" content="Request a Quote — NIL & Incentive Insurance | World">
+<meta name="twitter:description" content="Request a quote for NIL insurance, contractual bonus insurance, or prize contest coverage. Response within one business day. Direct contact with our specialty team.">
+<meta name="twitter:image" content="https://zachbrooker.github.io/NIL-Insurance/world-logo.png">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="world-logo.png">
+
+<!-- JSON-LD Organization Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FinancialService",
+  "name": "World Insurance Associates — NIL & Athletics Practice",
+  "alternateName": "World NIL Insurance",
+  "description": "Specialty insurance for Name, Image & Likeness (NIL) agreements, revenue-share commitments, contractual bonuses, and performance-based incentives for college athletic departments. Underwritten through Lloyd's of London.",
+  "url": "https://zachbrooker.github.io/NIL-Insurance/",
+  "logo": "https://zachbrooker.github.io/NIL-Insurance/world-logo.png",
+  "parentOrganization": {
+    "@type": "Organization",
+    "name": "World Insurance Associates, LLC",
+    "url": "https://www.worldinsurance.com/",
+    "foundingDate": "2011"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1700 Broadway",
+    "addressLocality": "New York",
+    "addressRegion": "NY",
+    "postalCode": "10019",
+    "addressCountry": "US"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+1-917-690-3151",
+    "contactType": "sales",
+    "email": "peterbaer@worldinsurance.com",
+    "availableLanguage": "English",
+    "areaServed": "US"
+  },
+  "serviceType": ["NIL Insurance", "Contractual Bonus Insurance", "Prize Contest Insurance", "Specialty Athletic Insurance"],
+  "areaServed": {
+    "@type": "Country",
+    "name": "United States"
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* Contact page form styling */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);
+    gap: var(--s-12);
+    align-items: start;
+  }
+  .contact-direct {
+    position: sticky;
+    top: 100px;
+  }
+  .contact-direct-block {
+    padding: var(--s-6) 0;
+    border-top: 1px solid var(--line);
+  }
+  .contact-direct-block:last-child { border-bottom: 1px solid var(--line); }
+  .contact-direct-block .role {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--fg-dim);
+    margin-bottom: var(--s-2);
+  }
+  .contact-direct-block h4 {
+    font-size: 1.125rem;
+    margin-bottom: var(--s-1);
+  }
+  .contact-direct-block .title {
+    font-size: 0.85rem;
+    color: var(--fg-muted);
+    margin-bottom: var(--s-3);
+  }
+  .contact-direct-block .contact-line {
+    font-family: var(--mono);
+    font-size: 0.85rem;
+    display: block;
+    margin-bottom: 2px;
+  }
+  .contact-direct-block a:hover { color: var(--accent-dim); }
+
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--s-5);
+  }
+  .form-field-full { grid-column: 1 / -1; }
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-2);
+  }
+  .form-field label {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--fg-muted);
+  }
+  .form-field label .req { color: var(--accent-dim); }
+  .form-field input,
+  .form-field select,
+  .form-field textarea {
+    font-family: var(--sans);
+    font-size: 0.95rem;
+    color: var(--fg-strong);
+    background: var(--bg);
+    border: 1px solid var(--line-strong);
+    padding: 0.75rem 1rem;
+    transition: border-color 150ms ease, background 150ms ease;
+    width: 100%;
+  }
+  .form-field input:focus,
+  .form-field select:focus,
+  .form-field textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    background: #FFFFFF;
+  }
+  .form-field textarea {
+    min-height: 140px;
+    resize: vertical;
+    font-family: var(--sans);
+    line-height: 1.5;
+  }
+  .form-field select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235A6485' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 2.5rem;
+  }
+  .form-submit-row {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: var(--s-5);
+    margin-top: var(--s-4);
+  }
+  .form-note {
+    font-size: 0.75rem;
+    color: var(--fg-muted);
+    max-width: 42ch;
+  }
+  @media (max-width: 980px) {
+    .contact-grid { grid-template-columns: 1fr; }
+    .contact-direct { position: static; }
+    .form-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="world-logo.png" alt="World Insurance Associates" class="mark" style="width:auto; height:32px;">
+      <span class="divider"></span>
+      <span class="sub">NIL &amp; Athletics</span>
+    </a>
+    <div class="nav-menu">
+      <a href="index.html">Home</a>
+      <div class="nav-dropdown">
+        <button>Coverage</button>
+        <div class="nav-dropdown-menu">
+          <a href="nil-insurance.html">
+            <div class="item-mono">001</div>
+            <span class="item-title">NIL Insurance</span>
+            <span class="item-desc">For athletic departments &amp; collectives</span>
+          </a>
+          <a href="contractual-bonus.html">
+            <div class="item-mono">002</div>
+            <span class="item-title">Contractual Bonus</span>
+            <span class="item-desc">Performance-triggered compensation</span>
+          </a>
+          <a href="prize-contest.html">
+            <div class="item-mono">003</div>
+            <span class="item-title">Hole-in-One &amp; Prize Contest</span>
+            <span class="item-desc">Event-specific prize coverage</span>
+          </a>
+        </div>
+      </div>
+      <a href="why-world.html">Why World</a>
+      <a href="team.html">Team</a>
+      <a href="contact.html" class="btn btn-accent current-nav-btn" style="padding:0.55rem 1rem">Request a quote</a>
+    </div>
+    <button class="nav-mobile-toggle" aria-label="Toggle menu" onclick="document.getElementById('nav').dataset.open = document.getElementById('nav').dataset.open === 'true' ? 'false' : 'true'">
+      <span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-meta reveal reveal-1">
+      <span class="dot"></span>
+      <span>Contact / Request a quote</span>
+      <span class="divider">/</span>
+      <span>Response within one business day</span>
+    </div>
+
+    <h1 class="reveal reveal-2" style="max-width: 20ch">Let's talk through your coverage needs.</h1>
+
+    <p class="lead hero-lead reveal reveal-3">Tell us about your program. We'll review the details, identify the right specialty market, and come back with an initial structure and indicative terms.</p>
+  </div>
+</section>
+
+<!-- ================= CONTACT GRID ================= -->
+<section style="padding-top: var(--s-8)">
+  <div class="wrap">
+    <div class="contact-grid">
+
+      <!-- Left column: direct contacts -->
+      <div class="contact-direct">
+        <span class="eyebrow" style="display:block; margin-bottom:var(--s-6); padding-bottom:var(--s-3); border-bottom:1px solid var(--line)">Direct contacts</span>
+
+        <div class="contact-direct-block">
+          <div class="role">Lead advisor</div>
+          <h4>Peter Baer</h4>
+          <div class="title">Senior Vice President</div>
+          <a href="tel:9176903151" class="contact-line">917.690.3151</a>
+          <a href="mailto:peterbaer@worldinsurance.com" class="contact-line">peterbaer@worldinsurance.com</a>
+        </div>
+
+        <div class="contact-direct-block">
+          <div class="role">Client advisor</div>
+          <h4>Malcolm MacLean</h4>
+          <div class="title">Sports &amp; Entertainment</div>
+          <a href="tel:3104907402" class="contact-line">310.490.7402</a>
+          <a href="mailto:malcolmmaclean@worldinsurance.com" class="contact-line">malcolmmaclean@worldinsurance.com</a>
+        </div>
+
+        <div class="contact-direct-block">
+          <div class="role">Client advisor</div>
+          <h4>Zach Brooker</h4>
+          <div class="title">Sports &amp; Entertainment</div>
+          <a href="tel:8187466409" class="contact-line">818.746.6409</a>
+          <a href="mailto:zacharybrooker@worldinsurance.com" class="contact-line">zacharybrooker@worldinsurance.com</a>
+        </div>
+
+        <div style="margin-top: var(--s-8); font-size: 0.85rem; color: var(--fg-muted); line-height: 1.6">
+          <div style="font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--fg-dim); margin-bottom: var(--s-3)">Office</div>
+          World Insurance Associates<br>
+          1700 Broadway<br>
+          New York, NY 10019
+        </div>
+      </div>
+
+      <!-- Right column: form -->
+      <div>
+        <span class="eyebrow" style="display:block; margin-bottom:var(--s-6); padding-bottom:var(--s-3); border-bottom:1px solid var(--line)">Request a quote / Form</span>
+
+        <!--
+          ======================================================================
+          FORMSPREE ENDPOINT — MUST BE REPLACED BEFORE LAUNCH
+          ======================================================================
+          Current setup: form submissions route to zacharybrooker@worldinsurance.com
+          via Formspree.
+
+          TO ACTIVATE:
+          1. Go to https://formspree.io and sign up free
+          2. Click "+ New form"
+          3. Name: "NIL Insurance Quote Requests"
+          4. Recipient email: zacharybrooker@worldinsurance.com
+          5. Copy the endpoint URL (format: https://formspree.io/f/abc12345)
+          6. Replace YOUR_FORM_ID_HERE below with your actual form ID
+          ======================================================================
+        -->
+        <!-- Thank-you message shown after successful submission -->
+        <div id="formSuccess" style="display:none; padding: var(--s-8); background: var(--bg-alt); border-left: 2px solid var(--accent);">
+          <span class="eyebrow" style="color: var(--accent-dim); display:block; margin-bottom: var(--s-3)">// Request received</span>
+          <h3 style="margin-bottom: var(--s-4); color: var(--fg-strong)">Thanks — we&rsquo;ll be in touch.</h3>
+          <p style="color: var(--fg-muted); font-size: 0.95rem; line-height: 1.6; max-width: 56ch">Your request has been delivered to our team. You&rsquo;ll hear back within one business day. If it&rsquo;s urgent, call Peter directly at <a href="tel:9176903151" style="color: var(--fg-strong); border-bottom: 1px solid var(--accent)">917.690.3151</a>.</p>
+        </div>
+
+        <form action="https://formspree.io/f/xkokqnvb" method="POST" class="form-grid" id="quoteForm">
+          <input type="hidden" name="_subject" value="NIL Insurance — New Quote Request">
+
+          <div class="form-field">
+            <label for="firstName">First name <span class="req">*</span></label>
+            <input type="text" id="firstName" name="firstName" required>
+          </div>
+
+          <div class="form-field">
+            <label for="lastName">Last name <span class="req">*</span></label>
+            <input type="text" id="lastName" name="lastName" required>
+          </div>
+
+          <div class="form-field">
+            <label for="email">Work email <span class="req">*</span></label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-field">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+
+          <div class="form-field form-field-full">
+            <label for="institution">Institution / Organization <span class="req">*</span></label>
+            <input type="text" id="institution" name="institution" required placeholder="e.g., DePaul University Athletics">
+          </div>
+
+          <div class="form-field">
+            <label for="role">Your role <span class="req">*</span></label>
+            <select id="role" name="role" required>
+              <option value="">Select one</option>
+              <option>Athletic Director</option>
+              <option>Associate / Deputy AD</option>
+              <option>Chief Financial Officer</option>
+              <option>Risk Management</option>
+              <option>General Counsel</option>
+              <option>Collective / Booster</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="coverage">Coverage interest <span class="req">*</span></label>
+            <select id="coverage" name="coverage" required>
+              <option value="">Select one</option>
+              <option>NIL Insurance</option>
+              <option>Contractual Bonus</option>
+              <option>Hole-in-One &amp; Prize Contest</option>
+              <option>Multiple / Not sure yet</option>
+            </select>
+          </div>
+
+          <div class="form-field form-field-full">
+            <label for="message">Program details <span class="req">*</span></label>
+            <textarea id="message" name="message" required placeholder="Brief description of your program structure, approximate financial commitment, target coverage period, and any specific questions."></textarea>
+          </div>
+
+          <div class="form-submit-row">
+            <button type="submit" class="btn btn-primary">
+              Send request
+              <svg class="arrow" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 5H11M11 5L7 1M11 5L7 9" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <p class="form-note">We'll respond within one business day. All information is confidential and used only to evaluate coverage options.</p>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="wrap-wide">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <span>World Insurance Associates</span>
+        </div>
+        <p class="footer-brand-desc">Specialty insurance for college athletic departments, collectives, and event programs. Placements made through specialty insurers and Lloyd's of London syndicates.</p>
+      </div>
+      <div>
+        <h5>Coverage</h5>
+        <ul>
+          <li><a href="nil-insurance.html">NIL Insurance</a></li>
+          <li><a href="contractual-bonus.html">Contractual Bonus</a></li>
+          <li><a href="prize-contest.html">Hole-in-One &amp; Prize</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul>
+          <li><a href="why-world.html">Why World</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Direct</h5>
+        <ul>
+          <li>Peter Baer, SVP</li>
+          <li><a href="tel:9176903151">917.690.3151</a></li>
+          <li><a href="mailto:peterbaer@worldinsurance.com" style="word-break:break-all">peterbaer@<br>worldinsurance.com</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-meta">
+      <div>© <span id="year"></span> World Insurance Associates LLC</div>
+      <div>1700 Broadway · New York · NY 10019</div>
+    </div>
+
+    <div class="footer-disclaimer">
+      Information on this site is provided for general reference only and does not constitute an offer to provide insurance. Coverage is subject to policy terms, conditions, limitations, and exclusions. Binding quotations require review and acceptance by the applicable insurance carrier or underwriting facility. Insurance products are offered through licensed insurance brokers.
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Intercept form submission and handle it with fetch
+  // so the user stays on your site and sees a clean thank-you message
+  const form = document.getElementById('quoteForm');
+  const successBox = document.getElementById('formSuccess');
+
+  if (form) {
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const submitBtn = form.querySelector('button[type="submit"]');
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = 'Sending...';
+      }
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          form.style.display = 'none';
+          successBox.style.display = 'block';
+          successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        } else {
+          alert('Something went wrong. Please email peterbaer@worldinsurance.com or call 917-690-3151.');
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = 'Send request <svg class="arrow" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 5H11M11 5L7 1M11 5L7 9" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+          }
+        }
+      } catch (err) {
+        alert('Network error. Please email peterbaer@worldinsurance.com or call 917-690-3151.');
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = 'Send request <svg class="arrow" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 5H11M11 5L7 1M11 5L7 9" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+        }
+      }
+    });
+  }
+</script>
+
+</body>
+</html>
