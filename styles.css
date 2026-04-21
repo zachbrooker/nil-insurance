@@ -449,6 +449,65 @@ section {
 }
 .btn:hover .arrow { transform: translateX(3px); }
 
+/* Download button — for one-pager PDFs */
+.btn-download {
+  background: transparent;
+  color: var(--fg-strong);
+  border: 1px solid var(--line-strong);
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  padding: 0.7rem 1.15rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+.btn-download:hover {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--navy-deep);
+}
+.btn-download .download-icon {
+  width: 14px;
+  height: 14px;
+  transition: transform 180ms ease;
+}
+.btn-download:hover .download-icon { transform: translateY(2px); }
+
+/* Download strip — sits right after hero on product pages */
+.download-strip {
+  padding: var(--s-5) 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: var(--bg-alt);
+}
+.download-strip .wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--s-4);
+  flex-wrap: wrap;
+}
+.download-strip .download-label {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+.download-strip .download-label strong {
+  color: var(--fg-strong);
+  font-weight: 500;
+  text-transform: none;
+  font-family: var(--sans);
+  letter-spacing: -0.005em;
+  font-size: 0.95rem;
+}
+@media (max-width: 720px) {
+  .download-strip .wrap { justify-content: flex-start; }
+}
+
 /* ---------- Hero ---------- */
 .hero {
   padding: var(--s-16) 0 var(--s-12);
