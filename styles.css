@@ -7,14 +7,15 @@
 /* ---------- Design tokens ---------- */
 :root {
   /* Backgrounds */
-  --bg:        #FFFFFF;
-  --bg-alt:    #F7F7F5;
-  --bg-surface:#F2F2EF;
-  --bg-raised: #ECECE8;
+  --bg:        #FAF8F3;   /* warm paper — softer than pure white */
+  --bg-alt:    #F0EDE4;   /* section alternation */
+  --bg-surface:#E8E4D8;
+  --bg-raised: #DED9CA;
 
-  /* Dark sections (CTA + footer) */
+  /* Dark sections */
   --bg-dark:       #0F1B3D;
   --bg-dark-deep:  #0A1530;
+  --bg-dark-alt:   #15234A;   /* slightly lighter dark for layered sections */
 
   /* Text colors (on light bg) */
   --fg:        #1F2C5C;   /* World navy — body text */
@@ -221,10 +222,10 @@ section {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(15, 27, 61, 0.92);
   backdrop-filter: saturate(150%) blur(16px);
   -webkit-backdrop-filter: saturate(150%) blur(16px);
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .nav-inner {
@@ -241,7 +242,7 @@ section {
   display: flex;
   align-items: center;
   gap: var(--s-3);
-  color: var(--fg-strong);
+  color: #FFFFFF;
   font-weight: 500;
   font-size: 0.95rem;
   letter-spacing: -0.01em;
@@ -250,11 +251,13 @@ section {
   width: 22px;
   height: 22px;
   flex-shrink: 0;
+  /* Logo is designed for light backgrounds — brighten it slightly on dark nav */
+  filter: brightness(1.15) saturate(1.1);
 }
 .nav-logo .divider {
   width: 1px;
   height: 18px;
-  background: var(--line-strong);
+  background: rgba(255, 255, 255, 0.2);
 }
 .nav-logo .sub {
   font-family: var(--mono);
@@ -262,7 +265,7 @@ section {
   font-weight: 400;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--fg-muted);
+  color: rgba(255, 255, 255, 0.65);
 }
 
 .nav-menu {
@@ -274,7 +277,7 @@ section {
 .nav-menu > a,
 .nav-dropdown > button {
   font-size: 0.85rem;
-  color: var(--fg-muted);
+  color: rgba(255, 255, 255, 0.7);
   padding: var(--s-2) 0;
   transition: color 150ms ease;
   position: relative;
@@ -285,7 +288,7 @@ section {
 }
 .nav-menu > a:hover,
 .nav-dropdown > button:hover,
-.nav-menu > a.current { color: var(--fg-strong); }
+.nav-menu > a.current { color: #FFFFFF; }
 
 .nav-menu > a.current::after {
   content: '';
@@ -362,7 +365,7 @@ section {
   display: none;
   width: 32px;
   height: 32px;
-  color: var(--fg-strong);
+  color: #FFFFFF;
   align-items: center;
   justify-content: center;
 }
@@ -521,16 +524,18 @@ section {
   max-width: 24ch;
 }
 
-/* ---------- Data stats bar ---------- */
+/* ---------- Data stats bar (DARK band) ---------- */
 .stats-bar {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  border-top: 1px solid var(--line-strong);
-  border-bottom: 1px solid var(--line-strong);
+  background: var(--bg-dark);
+  color: #FFFFFF;
+  border-top: 1px solid var(--bg-dark);
+  border-bottom: 1px solid var(--bg-dark);
 }
 .stat-cell {
   padding: var(--s-8) var(--s-5);
-  border-right: 1px solid var(--line);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
 .stat-cell:last-child { border-right: none; }
 .stat-cell .stat-label {
@@ -538,20 +543,20 @@ section {
   font-size: 0.65rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--fg-dim);
+  color: var(--accent);
   margin-bottom: var(--s-5);
 }
 .stat-cell .stat-value {
   font-size: 1.75rem;
   font-weight: 300;
-  color: var(--fg-strong);
+  color: #FFFFFF;
   letter-spacing: -0.025em;
   line-height: 1.1;
   margin-bottom: var(--s-2);
 }
 .stat-cell .stat-desc {
   font-size: 0.8125rem;
-  color: var(--fg-muted);
+  color: rgba(255, 255, 255, 0.65);
   line-height: 1.4;
 }
 
@@ -601,6 +606,23 @@ section {
   transform: translateX(4px);
 }
 
+/* Dark variant */
+.product-index-dark {
+  border-top-color: rgba(255, 255, 255, 0.14);
+}
+.product-index-dark .product-row {
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+.product-index-dark .product-row:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+.product-index-dark .product-row .p-num { color: var(--accent); }
+.product-index-dark .product-row h3 { color: #FFFFFF; }
+.product-index-dark .product-row:hover h3 { color: var(--accent); }
+.product-index-dark .product-row p { color: rgba(255, 255, 255, 0.7); }
+.product-index-dark .product-row .arrow { color: rgba(255, 255, 255, 0.4); }
+.product-index-dark .product-row:hover .arrow { color: var(--accent); }
+
 /* ---------- Feature list ---------- */
 .feature-list {
   display: flex;
@@ -630,6 +652,34 @@ section {
   font-size: 0.9375rem;
   max-width: 68ch;
 }
+
+/* Dark-band variant (used inside .section-dark) */
+.section-dark {
+  background: var(--bg-dark);
+  color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+}
+.section-dark::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(143, 195, 32, 0.05) 1px, transparent 1px);
+  background-size: 32px 32px;
+  mask-image: radial-gradient(ellipse at 20% 40%, black 0%, transparent 60%);
+  -webkit-mask-image: radial-gradient(ellipse at 20% 40%, black 0%, transparent 60%);
+  pointer-events: none;
+}
+.section-dark > * { position: relative; }
+.section-dark h2 { color: #FFFFFF; }
+.section-dark h4 { color: #FFFFFF; }
+
+.feature-list-dark li {
+  border-top-color: rgba(255, 255, 255, 0.12);
+}
+.feature-list-dark li:last-child { border-bottom-color: rgba(255, 255, 255, 0.12); }
+.feature-list-dark .num { color: var(--accent); }
+.feature-list-dark p { color: rgba(255, 255, 255, 0.65); }
 
 /* ---------- Coverage data blocks ---------- */
 .coverage-grid {
@@ -671,6 +721,18 @@ section {
   background: var(--accent);
   margin-top: 0.7rem;
 }
+
+/* Dark variant */
+.coverage-grid-dark {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.14);
+}
+.coverage-grid-dark .coverage-block {
+  background: var(--bg-dark);
+}
+.coverage-grid-dark .coverage-block .eyebrow { color: var(--accent); }
+.coverage-grid-dark .coverage-block h3 { color: #FFFFFF; }
+.coverage-grid-dark .coverage-block ul li { color: rgba(255, 255, 255, 0.8); }
 
 /* ---------- Limitations block ---------- */
 .limitations {
@@ -907,8 +969,8 @@ section {
   left: 0;
   right: 0;
   flex-direction: column;
-  background: var(--bg);
-  border-bottom: 1px solid var(--line);
+  background: var(--bg-dark);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding: var(--s-4) var(--s-6);
   gap: 0;
   align-items: stretch;
@@ -916,7 +978,8 @@ section {
 .nav[data-open="true"] .nav-menu > a,
 .nav[data-open="true"] .nav-dropdown > button {
   padding: var(--s-3) 0;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.85);
 }
 .nav[data-open="true"] .nav-dropdown-menu {
   position: static;
